@@ -31,7 +31,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
     return SizedBox(
         width: double.infinity,
         child: Container(
-          margin: EdgeInsets.all(40),
+          margin: EdgeInsets.all(10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -50,7 +50,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 return AnswerButton(
                     answerText: answer,
                     onTap: () {
-                      answerQuestion(answer);
+                      //onTap still takes an anonymous function as main function assigned
+                      answerQuestion(
+                          answer); //this only executes when the function is triggered
                     });
               })
             ],
